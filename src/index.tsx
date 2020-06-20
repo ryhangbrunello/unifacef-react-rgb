@@ -3,6 +3,7 @@ import 'semantic-ui-css/semantic.min.css'
 import  './plugins/sentry.plugin'
 import { } from './';
 import './apis/axios.api';
+import './plugins/one-signal.plugin';
 
 import * as serviceWorker from './serviceWorker';
 import * as store from './mobx'
