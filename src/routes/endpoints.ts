@@ -1,3 +1,4 @@
+import Cache from "../containers/cache"
 import Combustivel from "../containers/combustivel"
 import Home from "../containers/home";
 import { RouteProps } from "react-router-dom";
@@ -17,5 +18,6 @@ export const endpoints: EndPointsProps[] = [
     { path: `${publicUrl}/combustivel`, name: 'Combustível', component: Combustivel, exact: true },
     { path: `${publicUrl}/star-wars`, name: 'Star Wars', component: StarWars, exact: true },
     { path: `${publicUrl}/star-wars/:id`, component: StarWarsDetails, exact: true },
+    { path: `${publicUrl}/cache`, name: 'Cache', component: Cache, exact: true },
     { path: `${publicUrl}/sobre`, name: 'Sobre', component: Sobre, exact: true },
 ]

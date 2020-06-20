@@ -1,3 +1,4 @@
+import { cache } from '../containers/cache/store'
 import { combustivel } from '../containers/combustivel/store';
 import { home } from '../containers/home/store'
 import { router } from './router.store';
@@ -9,5 +10,6 @@ export {
     combustivel,
     starWars,
     starWarsDetails,
-    home
+    home,
+    cache,
 }
