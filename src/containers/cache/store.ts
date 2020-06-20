@@ -32,7 +32,9 @@ export default class CacheSotre {
     }
 
     @action loadForm = () => {
-        this.cookie = this.getCookie('unifacef');
+        this.cookie = this.getCookie('unifacef')
+        this.session = sessionStorage.getItem('unifacef-session');
+        this.local = localStorage.getItem('unifacef-local');
     }
 
     getCookie(cname) {
