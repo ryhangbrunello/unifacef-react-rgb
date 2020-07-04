@@ -27,7 +27,6 @@ export const endpoints: EndPointsProps[] = [
     { path: `${publicUrl}/register`, name: 'Register', component: Register, exact: true },
     { path: `${publicUrl}/corona`, name: 'Corona', component: Corona, exact: true },
     { path: `${publicUrl}/sobre`, name: 'Sobre', component: Sobre, exact: true },
-    { path: `${publicUrl}/logout`, name: 'Logout', component: Login, exact: true },
 ]
 
 export const loginEndpoints: EndPointsProps[] = [
