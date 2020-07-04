@@ -1,8 +1,10 @@
-import React from "react";
-import { Menu } from "semantic-ui-react";
-import { endpoints } from "../../routes/endpoints";
 import { inject, observer } from "mobx-react";
+
+import Logo from '../logo';
+import { Menu } from "semantic-ui-react";
 import NewRouterStore from "../../mobx/router.store";
+import React from "react";
+import { endpoints } from "../../routes/endpoints";
 
 interface Props {
     router?: NewRouterStore;
@@ -23,6 +25,9 @@ export default class MainMenu extends React.Component<Props> {
             <>
                 <div className={'nav'}>
                     <Menu color='blue' inverted={true} size='large' secondary={true} stackable={true}>
+                        <Menu.Item>
+                            <Logo />
+                        </Menu.Item>
                         {endpoints.filter(x => x.name).map((item, index) => {
                             return <Menu.Item key={index}
                                 name={item.path?.toString()}

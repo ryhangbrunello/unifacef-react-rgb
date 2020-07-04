@@ -13,6 +13,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from 'react-router-dom';
 import Routes from './routes';
+import { SentryError } from './components/sentry-error';
 import { createBrowserHistory } from 'history';
 import { router } from './mobx';
 import { syncHistoryWithStore } from "mobx-react-router";
@@ -26,7 +27,9 @@ ReactDOM.render(
     <Provider {...store}>
       <Loading/>
       <Router history={history}>
-        <Routes />
+        <SentryError>
+          <Routes />
+        </SentryError>
       </Router>
     </Provider>
   </React.StrictMode>,
