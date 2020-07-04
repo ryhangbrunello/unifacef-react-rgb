@@ -17,21 +17,20 @@ export default class Routes extends React.Component {
         return(
             <>
             {loginEndpoints.map((route, i) => (
-          <Route key={i} {...route} />)
-        )}
-        {isLoggedIn() ?
-
-            <>
-            <MainMenu/>
-            <Divider hidden={true} />
-            <Switch>
-                {endpoints.map((route, key) => (
-                    <Route key={key} {...route} />
-                ))}
-                <Route path='*' exact={true} render={props => <NotFound {...props}/>} />
-            </Switch>
-            </> : <Redirect to={{ pathname: 'login' }} />}
-      </>
-        )
+                <Route key={i} {...route} />)
+            )}
+            {isLoggedIn() ?
+                <>
+                    <MainMenu/>
+                    <Divider hidden={true} />
+                    <Switch>
+                        {endpoints.map((route, key) => (
+                            <Route key={key} {...route} />
+                        ))}
+                        <Route path='*' exact={true} render={props => <NotFound {...props}/>} />
+                    </Switch> 
+                </> : <Redirect to={{ pathname: 'login' }} />
+            }
+      </>)
     }
 }
